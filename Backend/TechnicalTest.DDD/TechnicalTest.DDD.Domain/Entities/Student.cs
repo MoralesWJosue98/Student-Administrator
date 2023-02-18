@@ -3,22 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechnicalTest.DDD.Domain.ValueObjects;
 
 namespace TechnicalTest.DDD.Domain.Entities
 {
-    internal class Student
+    public class Student
     {
-        // TODO: Add Student Entity Impl
-        // TODO: Add ValueObject Comments
-        public int ID { get; set; }
+        public int Id { get; set; }
 
-        public string Name { get; set; }    
+        public Student(int id)
+        {
+            Id = id;
+        }
+        public StudentName Name { get; private set; }    
+        
+        public void SetName(StudentName name)
+        {
+            Name = name;
+        }
+        public StudentLastName LastName { get; set; }    
 
-        public string LastName { get; set; }    
+        public void SetLastName(StudentLastName lastName)
+        {
+            LastName = lastName;
+        }
 
-        public string Career { get; set; }
+        public StudentCareer Career { get; set; }
 
-        public DateTime AdmissionDate { get; set; } 
+        public void SetStudentCareer(StudentCareer studentCareer)
+        {
+            Career = studentCareer;
+        }
+
+        public StudentAdmissionDate AdmissionDate { get; set; } 
+        public void SetStudentAdmissionDate(StudentAdmissionDate admissionDate)
+        {
+            AdmissionDate = admissionDate;
+        }
 
 
 
