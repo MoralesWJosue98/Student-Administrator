@@ -9,12 +9,6 @@ namespace TechnicalTest.DDD.Domain.Entities
 {
     public class Student
     {
-        public int Id { get; set; }
-
-        public Student(int id)
-        {
-            Id = id;
-        }
         public StudentName Name { get; private set; }    
         
         public void SetName(StudentName name)
