@@ -11,6 +11,7 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         protected StudentAdmissionDate()
         { }
 
+        // Encapsulation of the setting or creation of the admission date value in the student entity
         public DateTime Value { get; protected set; }
 
         internal StudentAdmissionDate(DateTime value)

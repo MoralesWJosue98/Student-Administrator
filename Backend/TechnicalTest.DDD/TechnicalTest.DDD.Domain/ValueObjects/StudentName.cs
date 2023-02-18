@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace TechnicalTest.DDD.Domain.ValueObjects
 {
@@ -12,6 +13,7 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         protected StudentName()
         {}
 
+        // Encapsulation of the setting or creation of the name value in the student entity
         public string Value { get; protected set; }    
 
         internal StudentName(string value)

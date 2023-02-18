@@ -11,6 +11,7 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         protected StudentCareer()
         { }
 
+        // Encapsulation of the setting or creation of the career value in the student entity
         public string Value { get; protected set; }
 
         internal StudentCareer(string value)

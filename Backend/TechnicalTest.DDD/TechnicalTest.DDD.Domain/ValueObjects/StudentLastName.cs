@@ -11,6 +11,7 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         protected StudentLastName()
         { }
 
+        // Encapsulation of the setting or creation of the last name value in the student entity
         public string Value { get; protected set; }
 
         internal StudentLastName(string value)
