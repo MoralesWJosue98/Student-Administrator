@@ -7,7 +7,7 @@ using TechnicalTest.DDD.Domain.ValueObjects;
 
 namespace TechnicalTest.DDD.Domain.Entities
 {
-    public class Student
+    public class Student : BaseEntity
     {
         public StudentName Name { get; private set; }    
         
