@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace TechnicalTest.DDD.Domain.ValueObjects
 {
-    internal class StudentAdmissionDate
+    public class StudentAdmissionDate
     {
+        protected StudentAdmissionDate()
+        { }
+
+        public DateTime Value { get; protected set; }
+
+        internal StudentAdmissionDate(DateTime value)
+        {
+            this.Value = value;
+        }
+        public static StudentAdmissionDate Create(DateTime value)
+        {
+            return new StudentAdmissionDate(value);
+        }
     }
 }

@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace TechnicalTest.DDD.Domain.ValueObjects
 {
-    internal class StudentName
+    
+    public class StudentName
     {
+        protected StudentName()
+        {}
+
+        public string Value { get; protected set; }    
+
+        internal StudentName(string value)
+        {
+            this.Value = value;
+        }
+        public static StudentName Create(string value)
+        {
+            return new StudentName(value);
+        }
+
     }
 }

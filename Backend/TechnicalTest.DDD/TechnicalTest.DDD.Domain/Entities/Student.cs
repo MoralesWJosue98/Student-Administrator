@@ -8,8 +8,8 @@ namespace TechnicalTest.DDD.Domain.Entities
 {
     internal class Student
     {
-        // TODO: change to value objects respective fields
-        // TODO: Value Objects Implementation
+        // TODO: Add Student Entity Impl
+        // TODO: Add ValueObject Comments
         public int ID { get; set; }
 
         public string Name { get; set; }    

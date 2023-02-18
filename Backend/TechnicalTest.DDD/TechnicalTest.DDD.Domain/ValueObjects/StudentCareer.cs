@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace TechnicalTest.DDD.Domain.ValueObjects
 {
-    public class StudentLastName
+    public class StudentCareer
     {
-        protected StudentLastName()
+        protected StudentCareer()
         { }
 
         public string Value { get; protected set; }
 
-        internal StudentLastName(string value)
+        internal StudentCareer(string value)
         {
             this.Value = value;
         }
-        public static StudentLastName Create(string value)
+        public static StudentCareer Create(string value)
         {
-            return new StudentLastName(value);
+            return new StudentCareer(value);
         }
 
     }
