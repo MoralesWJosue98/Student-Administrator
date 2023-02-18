@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalTest.DDD.Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechnicalTest.DDD.Infrastructure", "TechnicalTest.DDD.Infrastructure\TechnicalTest.DDD.Infrastructure.csproj", "{EB73BBEA-08BE-41FD-9061-22F4C0835631}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D44DBAE6-AFB8-4F6E-B10A-C2FDD4BDE314}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,7 +39,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6B3EBECC-2DE4-4556-A3B7-6241A9A4B3F6} = {5FAAD415-4441-4243-B23D-E429459F13D7}
-		{2AE5570A-3293-417E-98A9-70F6B07C33C6} = {D44DBAE6-AFB8-4F6E-B10A-C2FDD4BDE314}
 		{12F28CA7-5A54-45F0-971B-81124F33D5CB} = {08DB4D06-8F46-4B2C-90B6-09DB9B1BDBDE}
 		{EB73BBEA-08BE-41FD-9061-22F4C0835631} = {2AE5570A-3293-417E-98A9-70F6B07C33C6}
 	EndGlobalSection
