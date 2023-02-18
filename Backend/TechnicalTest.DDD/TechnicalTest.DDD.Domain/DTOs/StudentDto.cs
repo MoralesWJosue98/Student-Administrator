@@ -12,7 +12,7 @@ namespace TechnicalTest.DDD.Domain.DTOs
         public string Name { get; set; }    
         public string LastName { get; set; }
         public string Career { get; set; }
-        public string AdmissionDate { get; set; }   
+        public DateTime? AdmissionDate { get; set; }   
 
 
     }
