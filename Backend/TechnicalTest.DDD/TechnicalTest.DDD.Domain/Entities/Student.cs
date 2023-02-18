@@ -40,10 +40,5 @@ namespace TechnicalTest.DDD.Domain.Entities
         {
             AdmissionDate = admissionDate;
         }
-
-
-
-
-
     }
 }
