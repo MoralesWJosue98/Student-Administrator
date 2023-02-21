@@ -15,5 +15,6 @@ namespace TechnicalTest.DDD.Infrastructure.Mappers
         {
             CreateMap<StudentDto, Student>().ReverseMap();
         }
+
     }
 }
