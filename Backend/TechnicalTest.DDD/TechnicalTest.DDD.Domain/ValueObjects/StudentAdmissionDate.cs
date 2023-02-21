@@ -14,13 +14,15 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         // Encapsulation of the setting or creation of the admission date value in the student entity
         public DateTime Value { get; protected set; }
 
-        internal StudentAdmissionDate(DateTime value)
+        public static StudentAdmissionDate For(DateTime dateDate)
         {
-            this.Value = value;
+            var studentDate = new StudentAdmissionDate();
+            studentDate.Value = dateDate;
+            return studentDate;
         }
-        public static StudentAdmissionDate Create(DateTime value)
+        public override string ToString()
         {
-            return new StudentAdmissionDate(value);
+            return Value.ToString();
         }
     }
 }

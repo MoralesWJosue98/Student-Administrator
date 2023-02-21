@@ -14,13 +14,15 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         // Encapsulation of the setting or creation of the career value in the student entity
         public string Value { get; protected set; }
 
-        internal StudentCareer(string value)
+        public static StudentCareer For(string careerString)
         {
-            this.Value = value;
+            var studentCareer = new StudentCareer();
+            studentCareer.Value = careerString;
+            return studentCareer;
         }
-        public static StudentCareer Create(string value)
+        public override string ToString()
         {
-            return new StudentCareer(value);
+            return Value;
         }
 
     }

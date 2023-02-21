@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace TechnicalTest.DDD.Domain.ValueObjects
 {
     
-    public class StudentName
+    public class StudentName 
     {
         protected StudentName()
         {}
@@ -16,13 +16,15 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         // Encapsulation of the setting or creation of the name value in the student entity
         public string Value { get; protected set; }    
 
-        internal StudentName(string value)
+        public static StudentName For(string nameString)
         {
-            this.Value = value;
+            var studentName = new StudentName();
+            studentName.Value = nameString;
+            return studentName;
         }
-        public static StudentName Create(string value)
+        public override string ToString()
         {
-            return new StudentName(value);
+            return Value;
         }
 
     }

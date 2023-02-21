@@ -14,13 +14,15 @@ namespace TechnicalTest.DDD.Domain.ValueObjects
         // Encapsulation of the setting or creation of the last name value in the student entity
         public string Value { get; protected set; }
 
-        internal StudentLastName(string value)
+        public static StudentLastName For(string lastNameString)
         {
-            this.Value = value;
+            var studentLastName = new StudentLastName();
+            studentLastName.Value = lastNameString;
+            return studentLastName;
         }
-        public static StudentLastName Create(string value)
+        public override string ToString()
         {
-            return new StudentLastName(value);
+            return Value;
         }
 
     }
