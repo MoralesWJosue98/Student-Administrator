@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 // Add dbContext inyection dependency
 builder.Services.AddDbContext<DatabaseContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("TechnicalTest.DDD.API")
     ));
 
 var app = builder.Build();
@@ -24,6 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
