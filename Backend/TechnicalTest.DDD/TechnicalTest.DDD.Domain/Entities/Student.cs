@@ -15,6 +15,8 @@ namespace TechnicalTest.DDD.Domain.Entities
         {
             Name = name;
         }
+
+        
         public StudentLastName LastName { get; set; }    
 
         public void SetLastName(StudentLastName lastName)
