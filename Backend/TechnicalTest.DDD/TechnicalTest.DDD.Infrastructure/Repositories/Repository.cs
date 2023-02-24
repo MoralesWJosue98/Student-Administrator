@@ -35,6 +35,11 @@ namespace TechnicalTest.DDD.Infrastructure.Repositories
             await Task.Run(() => { Delete(entity); });
         }
 
+        public async Task<bool> ExistAsync(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await _entities.AnyAsync(predicate);
+        }
+
         public async Task<IEnumerable<TEntity>> GetAllAsync(int skip, int limit, IEnumerable<Expression<Func<TEntity, bool>>> predicates, IEnumerable<string> entitiesToInclude)
         {
            return await _entities.Filter(predicates)

@@ -17,5 +17,7 @@ namespace TechnicalTest.DDD.Domain.Repositories
         Task<TEntity> GetByIdAsync(int id, IEnumerable<string> entitiesToInclude = null);
         Task<IEnumerable<TEntity>> GetAllAsync(int skip, int limit, IEnumerable<Expression<Func<TEntity,bool>>> predicates = null, IEnumerable<string> entitiesToInclude = null);
 
+        Task<bool> ExistAsync(Expression<Func<TEntity,bool>> predicate);    
+
     }
 }
