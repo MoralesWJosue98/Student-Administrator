@@ -9,11 +9,11 @@ using TechnicalTest.DDD.Infrastructure.Database;
 
 namespace TechnicalTest.DDD.Infrastructure
 {
-    public class UnitOfWork : IUnitOfWork, IAsyncDisposable
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly DatabaseContext _databaseContext;
 
-        public IStudentRepository StudentRepository { get; private set; }   
+        public IStudentRepository StudentRepository { get; set; }   
 
         public UnitOfWork(DatabaseContext databaseContext, IStudentRepository studentRepository)
         {
@@ -27,9 +27,9 @@ namespace TechnicalTest.DDD.Infrastructure
             return await _databaseContext.SaveChangesAsync();
         }
 
-        public ValueTask DisposeAsync()
+        public void Dispose()
         {
-            return _databaseContext.DisposeAsync();
+            _databaseContext.Dispose();
         }
     }
 }

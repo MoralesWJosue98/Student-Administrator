@@ -7,9 +7,9 @@ using TechnicalTest.DDD.Domain.Repositories;
 
 namespace TechnicalTest.DDD.Domain
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
-        IStudentRepository StudentRepository { get; }
+        IStudentRepository StudentRepository { get; set; }
 
         Task<int> CompleteAsync();
 
